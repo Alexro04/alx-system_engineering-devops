@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#Using loops and conditional statements 
+i="0"
+while [ $i -lt 10 ];do 
+    if [ $i -eq 3 ];then
+    echo 'bad luck'
+    i=$((i+1))
+    continue
+
+    fi
+
+    if [ $i -eq 7 ];then
+    echo 'good luck'
+    i=$((i+1))
+    continue
+
+    fi
+
+    echo "Best School" 
+    i=$((i+1))
+    
+done

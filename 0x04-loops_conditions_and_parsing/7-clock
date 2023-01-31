@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#a bash script that counts the time for 12hrs 59mins.
+h="0"
+m="1"
+while [ $h -lt 13 ]; do
+    echo "Hour: $h"
+    
+    while [ $m -lt 60 ]; do
+        echo "$m"
+        m=$((m+1))
+
+    done
+
+    h=$((h+1))
+
+done

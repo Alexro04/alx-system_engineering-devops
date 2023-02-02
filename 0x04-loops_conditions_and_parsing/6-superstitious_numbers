@@ -7,17 +7,12 @@ while [ $i -lt 21 ]; do
 
     if [ $i -eq 5 ]; then
         echo "bad luck from China"
-    
-    fi
-
-    if [ $i -eq 10 ]; then
+    elif [ $i -eq 10 ]; then
         echo "bad luck from Japan"
-    
-    fi
 
-    if [ $i -eq 18 ]; then
+    else
+        [ $i -eq 18 ]; then
         echo "bad luck from Italy"
-    
     fi
 
 done

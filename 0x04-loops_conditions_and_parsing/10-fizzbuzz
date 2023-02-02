@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#display 1 to 100 using the fizz buzz rule
+list=$(seq 100)
+for item in $list; do
+    if [ $((item % "5")) = "0" ] && [ $((item % 3)) = "0" ]; then
+        echo "FizzBuzz"
+    elif [ $((item % 5)) = "0" ]; then
+        echo "Buzz"
+    elif [ $((item % 3)) = "0" ]; then
+        echo "Fizz"
+    else
+        echo "$item"
+
+    fi
+
+done

@@ -1,18 +1,16 @@
-# Client config file setup
+# Seting up my client config file
 include stdlib
 
-# SSH client configuration to refuse authentication using a password
-file_line {'OffPasswordAuthentication': 
-    ensure => 'present'
-    path => '/etc/ssh/ssh_config'
-    line => '   PasswordAuthentication no'
-    repalce => true
+file_line { 'Turn off passwd auth':
+  ensure => present,
+  path   => '/etc/ssh/ssh_config',
+  line   => '    PasswordAuthentication no',
+  replace => true,
 }
 
-# SSH client configuration to use the private key ~/.ssh/school
-file_line {'UseIdentityFile':
-    ensure => 'present',
-    path => '/etc/ssh/ssh_config'
-    line => '    IdentityFile ~/.ssh/school'
-    repalce => true
+file_line { 'Delare identity file':
+  ensure => present,
+  path   => '/etc/ssh/ssh_config',
+  line   => '     IdentityFile ~/.ssh/school',
+  replace => true,
 }

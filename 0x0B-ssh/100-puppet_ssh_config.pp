@@ -1,3 +1,4 @@
+# SSH client configuration to refuse authentication using a password
 file {'~/.ssh/ssh_config':
     content => '
     Host *

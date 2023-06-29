@@ -2,7 +2,7 @@
 include stdlib
 
 # SSH client configuration to refuse authentication using a password
-file-line {'OffPasswordAuthentication': 
+file_line {'OffPasswordAuthentication': 
     ensure => 'present'
     path => '/etc/ssh/ssh_config'
     line => '   PasswordAuthentication no'
@@ -10,7 +10,7 @@ file-line {'OffPasswordAuthentication':
 }
 
 # SSH client configuration to use the private key ~/.ssh/school
-file-line {'UseIdentityFile':
+file_line {'UseIdentityFile':
     ensure => 'present',
     path => '/etc/ssh/ssh_config'
     line => '    IdentityFile ~/.ssh/school'
